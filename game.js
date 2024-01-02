@@ -20,7 +20,7 @@ $(".btn").click(function () {
 	}
 });
 
-$(document).one("keypress", startGame);
+$(document).one("click", startGame);
 
 function startGame() {
 	count++;
@@ -47,11 +47,13 @@ function gameOver() {
 	$("body").addClass("game-over");
 	var wrong = new Audio("sounds/wrong.mp3");
 	wrong.play();
-	$("#level-title").text("Game Over. Press any key to restart.");
+	$("#level-title").html(
+		'Game Over. <span style="font-family: Rubik Doodle Shadow; font-size:5rem;border: 8px solid black;padding: 12px; border-radius: 10%;">Click me</span> to restart.'
+	);
 	count = 0;
 	colorarrayplayer = [];
 	colorarraycomp = [];
-	$(document).one("keypress", function () {
+	$("h1").one("click", function () {
 		$("body").removeClass("game-over");
 		startGame();
 	});
