@@ -20,7 +20,7 @@ $(".btn").click(function () {
 	}
 });
 
-$(document).one("click", startGame);
+$(document).one("click touchstart", startGame);
 
 function startGame() {
 	count++;
@@ -53,7 +53,7 @@ function gameOver() {
 	count = 0;
 	colorarrayplayer = [];
 	colorarraycomp = [];
-	$("h1").one("click", function () {
+	$("h1").one("click touchstart", function () {
 		$("body").removeClass("game-over");
 		startGame();
 	});
