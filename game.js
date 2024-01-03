@@ -20,7 +20,7 @@ $(".btn").click(function () {
 	}
 });
 
-$(document).one("click touchstart", startGame);
+$(document).one("touchstart", startGame);
 
 function startGame() {
 	count++;
@@ -48,7 +48,7 @@ function gameOver() {
 	var wrong = new Audio("sounds/wrong.mp3");
 	wrong.play();
 	$("#level-title").html(
-		'Game Over. <span style="font-family: Rubik Doodle Shadow; font-size:5rem;border: 8px solid black;padding: 12px; border-radius: 10%;">Click me</span> to restart.'
+		'<p style="font-size:4rem;">Game Over,<br><span style="font-family: Rubik Doodle Shadow; font-size:5rem;border: 8px solid black;margin-top:10px;margin-bottom:10px; padding-left:10px;padding-right:10px;border-radius: 10%;">Click</span><br>to restart.</p>'
 	);
 	count = 0;
 	colorarrayplayer = [];
